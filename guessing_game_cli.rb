@@ -17,7 +17,7 @@ def run_guessing_game
   user_number = user_guess
   if user_number == lucky_number
     puts "You guessed the correct number!"
-  elsif user_number = "exit"
+  elsif user_number == "exit"
     puts "Goodbye!"
     exit
   else
