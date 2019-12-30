@@ -11,17 +11,29 @@ def user_guess
   gets.chomp
 end
 
+def correct_answer
+  puts "You guessed the correct number!"
+end
+
+def quitter
+  puts "Goodbye!"
+  exit
+end
+
+def wrong_answer(number)
+  puts "Sorry! The computer guessed #{number}."
+end
+
 def run_guessing_game
   lucky_number = generate_number
   prompt_user
   user_number = user_guess
   if user_number == lucky_number
-    puts "You guessed the correct number!"
+    correct_answer
   elsif user_number == "exit"
-    puts "Goodbye!"
-    exit
+    quitter
   else
-    puts "Sorry! The computer guessed #{lucky_number}."
+    wrong_answer(lucky_number)
   end
 end
 
